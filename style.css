@@ -1,0 +1,228 @@
+/* Genaral style */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  color: #555;
+}
+
+body::selection {
+  background-color: yellow;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Heart style */
+
+video {
+  height: 50vh;
+  top: 100%;
+  transform: translateY(40%);
+}
+
+.heart {
+  position: absolute; /* Tạo ra vị trí tuyệt đối cho đối tượng trái tim */
+  transition: transform 0.2s ease-out; /* Thêm hiệu ứng chuyển động khi hover */
+  border-radius: 10px;
+  height: auto;
+  background-position: 10% 50%;
+}
+
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.heart {
+  position: absolute;
+  top: -50%;
+}
+
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+
+/* Sun style */
+
+body {
+  background-image: url('cmsn.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  animation-name: thesun;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.sun {
+  background: #f1c40f;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transform-origin: center;
+  animation-name: sunmotion;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sunmotion {
+  0% {
+    transform: translate(-550px, 100px);
+    background: #d35400;
+  }
+  25% {
+    transform: translate(-350px, 50px);
+    background: #4e06d3;
+  }
+  50% {
+    transform: translate(-100px, 250px);
+  }
+  75% {
+    transform: translate(300px, 10px);
+    background: #e0e40a;
+  }
+  100% {
+    transform: translate(500px, 800px);
+    background: #e74c3c;
+  }
+}
+
+/* Button style */
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.n1 {
+  margin: 35vh 0 40px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.n2,
+.n3,
+.n4,
+.n5 {
+  margin: 10px;
+  font-size: 20px;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .n1,
+  .n2,
+  .n3,
+  .n4,
+  .n5 {
+    font-size: 12px;
+  }
+}
+
+/* Content style */
+
+audio {
+  position: absolute;
+  top: 80%;
+  z-index: 1000;
+}
+
+.content h1 {
+  width: 500px;
+  height: 300px;
+  padding: 80px 80px;
+  text-align: center;
+  word-spacing: 2px;
+  font-family: "lato", sans-serif;
+  font-weight: bold;
+  color: white;
+  right: 300px;
+  bottom: 300px;
+  border: 2px solid yellow;
+  background-color: teal;
+  z-index: 10;
+  position: absolute;
+}
+
+#h5,
+#h6,
+#h7,
+#h8 {
+  opacity: 0;
+}
+
+#h1,
+#h2,
+#h3,
+#h4 {
+  opacity: 0;
+}
+
+.display {
+  animation: faded 3s forwards;
+}
+
+.display1 {
+  animation: faded2 3s forwards;
+}
+
+@keyframes faded2 {
+  90% {
+    opacity: 1;
+    right: 450px;
+    bottom: 40px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes faded {
+  90% {
+    opacity: 1;
+    right: 450px;
+    bottom: 40px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
